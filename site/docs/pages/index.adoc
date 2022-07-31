@@ -1,0 +1,38 @@
+= はじめてのClojureを、小さな階段で学ぼう
+:icons: font
+:toc: left
+:experimental:
+:url-github: https://github.com/blackawa/clojure-in-small-step
+
+このサイトは、はじめてのClojureを小さな課題を解きながら学ぶために作られました。
+
+== 一体なにが、既存のドキュメントと違うの？
+
+このサイトは、いくつかのトピックを犠牲にして、あなたに少なくとも一つの方法でClojure製アプリケーションを開発する方法を教えてくれます。
+
+=== 犠牲にするもの
+
+このサイトは、包括的な学びを犠牲にします。
+
+Clojureは本当に柔軟な言語です。様々な用途に適したツールセットが、いくつもあります。
+しかしこのサイトは、それらを全て解説はしません。
+あなたはこのサイトでの学習を通して、*自分の好きなテキストエディターを選ぶことさえできません*。
+
+この方針は、Clojureの魅力の一部を伝え損ねるでしょう。
+
+=== 手にいれるもの
+
+代わりに、あなたは1つの方法でClojureを快適に書くスキルを手に入れます。
+
+== はじめましょう
+
+それでは下のボタンをクリックして、勉強を始めましょう。
+
+[link=https://gitpod.io/#https://github.com/blackawa/clojure-in-small-step]
+image::https://gitpod.io/button/open-in-gitpod.svg[Open in GitPod]
+
+このボタンはブラウザ上で動くVSCodeを起動します。
+得た知見は、そのままあなたの手元のVSCodeでも通用します。
+
+// * xref:first_parenthesis.adoc[最初のカッコ]
+include::first_parenthesis.adoc[最初のカッコ]
