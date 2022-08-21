@@ -455,7 +455,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_章立て">章立て</a></li>
 </ul>
 </li>
-<li><a href="#_カッコ1最初の式">カッコ1(最初の式)</a></li>
+<li><a href="#_カッコ1最初の式">カッコ1(最初の式)</a>
+<ul class="sectlevel2">
+<li><a href="#_replの起動">REPLの起動</a></li>
+<li><a href="#_clojureの値">Clojureの値</a></li>
+<li><a href="#_clojureの式">Clojureの式</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -471,7 +477,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_一体なにが既存のドキュメントと違うの"><a class="anchor" href="#_一体なにが既存のドキュメントと違うの"></a>一体なにが、既存のドキュメントと違うの？</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>このサイトは、いくつかのトピックを犠牲にして、あなたに少なくとも一つの方法でClojure製アプリケーションを開発する方法を教えてくれます。</p>
+<p>このサイトは、いくつかのトピックを犠牲にして、あなたにClojure製アプリケーションを開発する方法を教えてくれます。</p>
 </div>
 <div class="sect2">
 <h3 id="_犠牲にするもの"><a class="anchor" href="#_犠牲にするもの"></a>犠牲にするもの</h3>
@@ -480,8 +486,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="paragraph">
 <p>Clojureは本当に柔軟な言語です。様々な用途に適したツールセットが、いくつもあります。
-しかしこのサイトは、それらを全て解説はしません。
-あなたはこのサイトでの学習を通して、<strong>自分の好きなテキストエディターを選ぶことさえできません</strong>。</p>
+しかしこのサイトは、それらを全ては解説しません。それどころか、他の入門サイトでは必ず紹介される言語の特性さえ、いくつかスキップします。あなたはこのサイトでの学習を通して、<strong>自分の好きなテキストエディターを選ぶことさえできません</strong>。</p>
 </div>
 <div class="paragraph">
 <p>この方針は、Clojureの魅力の一部を伝え損ねるでしょう。</p>
@@ -490,7 +495,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_手にいれるもの"><a class="anchor" href="#_手にいれるもの"></a>手にいれるもの</h3>
 <div class="paragraph">
-<p>代わりに、あなたは1つの方法でClojureを快適に書くスキルを手に入れます。</p>
+<p>代わりに、あなたは1つの方法でClojureを快適に書くスキルを手に入れます。そのスキルを使えば、あなた好みのツールセットやテキストエディターを探し、容易に乗り換えることができるでしょう。</p>
 </div>
 </div>
 </div>
@@ -583,6 +588,48 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ol>
 </div>
 </li>
+<li>
+<p>最後に</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>今後の学習経路</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>情報の収集場所</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>犠牲にしたもの・再来</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Atom</p>
+</li>
+<li>
+<p>マクロ</p>
+</li>
+<li>
+<p>他のテキストエディター</p>
+</li>
+<li>
+<p>シンボル</p>
+</li>
+<li>
+<p>プロトコル</p>
+</li>
+<li>
+<p>メタデータ</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
 </ol>
 </div>
 </div>
@@ -592,8 +639,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_カッコ1最初の式"><a class="anchor" href="#_カッコ1最初の式"></a>カッコ1(最初の式)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>VSCodeが開いたら、まずはREPLを起動しましょう。</p>
+<p>あなたは、この章でClojureの値と式について学びます。</p>
 </div>
+<div class="sect2">
+<h3 id="_replの起動"><a class="anchor" href="#_replの起動"></a>REPLの起動</h3>
 <div class="admonitionblock tip">
 <table>
 <tr>
@@ -607,7 +656,8 @@ REPLとは、Clojureのためのコマンドプロンプトのようなもので
 </table>
 </div>
 <div class="paragraph">
-<p>手順は下記のとおりです。</p>
+<p>VSCodeが開いたら、まずはREPLを起動しましょう。
+手順は下記のとおりです。</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -621,7 +671,7 @@ REPLとは、Clojureのためのコマンドプロンプトのようなもので
 <p><code>deps.edn</code> というプロジェクトを選ぶ</p>
 </li>
 <li>
-<p>勝手にファイルが開き、`clj:user&gt;`と表示されるのを待つ</p>
+<p>勝手にファイルが開き、 <code>clj:user&gt;</code> と表示されるまで、5秒ほど待つ</p>
 </li>
 </ol>
 </div>
@@ -642,15 +692,21 @@ REPLとは、Clojureのためのコマンドプロンプトのようなもので
 <img src="images/chapter_1/jack_in.gif" alt="REPLを起動する動画">
 </div>
 </div>
-<div class="paragraph">
-<p>==</p>
+</div>
+<div class="sect2">
+<h3 id="_clojureの値"><a class="anchor" href="#_clojureの値"></a>Clojureの値</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_clojureの式"><a class="anchor" href="#_clojureの式"></a>Clojureの式</h3>
+
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-21 02:58:53 UTC
+Last updated 2022-08-21 03:19:01 UTC
 </div>
 </div>
 </body>
