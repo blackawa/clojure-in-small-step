@@ -2,6 +2,7 @@
 :icons: font
 :toc: left
 :experimental:
+:sectanchors:
 :url-github: https://github.com/blackawa/clojure-in-small-step
 
 このサイトは、はじめてのClojureを小さな課題を解きながら学ぶために作られました。
@@ -22,7 +23,7 @@ Clojureは本当に柔軟な言語です。様々な用途に適したツール�
 
 === 手にいれるもの
 
-代わりに、あなたは1つの方法でClojureを快適に書くスキルを手に入れます。
+代わりに、あなたは1つの方法でClojureを快適に書くスキルを手に入れます。そのスキルを使えば、あなた好みのツールセットやテキストエディターを探し、容易に乗り換えることができるでしょう。
 
 == はじめましょう
 
@@ -31,10 +32,9 @@ Clojureは本当に柔軟な言語です。様々な用途に適したツール�
 [link=https://gitpod.io/#https://github.com/blackawa/clojure-in-small-step]
 image::https://gitpod.io/button/open-in-gitpod.svg[Open in GitPod]
 
-このボタンはブラウザ上で動くVSCodeを起動します。
-得た知見は、そのままあなたの手元のVSCodeでも通用します。
-
-// include::first_parenthesis.adoc[最初のカッコ]
+このボタンをクリックすると、ブラウザ上でVSCodeを起動します。
+いくつかの必要なプラグインがセットアップされた状態で起動するので、すぐにコードを書き始めることができます。
+そしてここで得た知見は、そのままあなたの手元のVSCodeでも通用します。
 
 == メモ
 
@@ -46,11 +46,33 @@ image::https://gitpod.io/button/open-in-gitpod.svg[Open in GitPod]
 . かっこの操作（応用）
 . イミュータブルさとシーケンス操作
 . REPLの活用（入門）
+.. source, doc
+.. nsのロード
+.. 値の上書き
 . テスト駆動開発
 . REPLの活用（応用）
+.. Reloaded workflow
+.. デバッグ
 . Webサーバーを作る（duct）
 . REPLの活用（ペアプロ）
+.. LiveShareとnREPLサーバー
+.. テスト駆動開発
 
-== カッコ1: 最初の式
+== カッコ1(最初の式)
+
+VSCodeが開いたら、まずはREPLを起動しましょう。
+
+TIP: REPLとは、Clojureのためのコマンドプロンプトのようなものです。詳しくは https://ja.wikipedia.org/wiki/REPL[Wikipedia]へどうぞ。
+
+手順は下記のとおりです。
+
+. コマンドパレットを開く
+. `Calva: Start a Project REPL and Connect(a.k.a Jack-In)` を選択する
+. `deps.edn` というプロジェクトを選ぶ
+. 勝手にファイルが開き、`clj:user>`と表示されるのを待つ
+
+TIP: <<#_犠牲にするもの,犠牲にするもの>>で宣言したとおり、`Jack-In`コマンドや `deps.edn`の詳細は説明しません。
+
+image::images/chapter_1/jack_in.gif[REPLを起動する動画]
 
 == 
