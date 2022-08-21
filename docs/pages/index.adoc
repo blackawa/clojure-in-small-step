@@ -34,5 +34,23 @@ image::https://gitpod.io/button/open-in-gitpod.svg[Open in GitPod]
 このボタンはブラウザ上で動くVSCodeを起動します。
 得た知見は、そのままあなたの手元のVSCodeでも通用します。
 
-// * xref:first_parenthesis.adoc[最初のカッコ]
-include::first_parenthesis.adoc[最初のカッコ]
+// include::first_parenthesis.adoc[最初のカッコ]
+
+== メモ
+
+=== 章立て
+
+. 値と式
+. かっこの操作（入門）
+. 関数と条件分岐
+. かっこの操作（応用）
+. イミュータブルさとシーケンス操作
+. REPLの活用（入門）
+. テスト駆動開発
+. REPLの活用（応用）
+. Webサーバーを作る（duct）
+. REPLの活用（ペアプロ）
+
+== カッコ1: 最初の式
+
+== 
