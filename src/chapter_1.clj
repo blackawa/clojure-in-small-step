@@ -3,44 +3,33 @@
             [clojure.string :as string]
             [clojure.test :refer [is are]]))
 
-;; Welcome to Clojure! ♥️
+;; 原典: https://github.com/BetterThanTomorrow/dram
 
-;; Start with loading this file.
+;; ようこそClojureの世界へ ♥️
+
+;; まずはファイル全体をREPLにロードしましょう。
 ;; Ctrl+Alt+C Enter
 
-;; Then evaluate this expression with Alt+Enter:
+;; それができたら、次に文字列を評価してみましょう。
+;; Alt+Enter
 
 "Hello World"
 
-;; That's a concise Hello World for any language.
-;; And note that there are no parens. 😀
+;; どの言語でもだいたいこんな感じで動きますよね。
+;; ちなみに、まだカッコはでてきません. 😀
 
-;; This guide will try to give you a basic
-;; understanding of the Clojure language. Basic in
-;; the sense that it is not extensive. Basic in the
-;; sense that it is foundational, building from first
-;; principles in order to make the Clojure journey
-;; you have ahead easier to comprehend.
+;; このガイドではClojureの基本をご紹介します。
+;; これから始まるClojureの旅路を歩みやすいように、ごく一部の基礎をお見せします。
 
-;; With the foundations in place you'll have a good 
-;; chance of having the right gut feeling for how to
-;; code something, how to formulate your questions,
-;; how to search effectively for information, how to make 
-;; sense of code you stumble across, and so on.
+;; 基本を知っていれば、コードを書くのも、質問するのも、情報収集も効率的にやれることでしょう。
 
-;; There will be links here and there, ctrl/cmd-click
-;; those to open them in a browser. Here's the first
-;; such link; 
+;; 包括的で基礎的なガイドは下記のサイトにもあります。
+;; Ctrl(Cmd)+Clickでアクセスしてください。 
 ;; https://clojure.org/guides/learn/syntax
-;; There you can read more about the concepts
-;; mentioned in this guide.
 
-;; The way to use the guide is to read about the
-;; concepts and evaluate the examples. Sometimes there
-;; will be exercises in the text. Don't limit your
-;; exercising to those, though. Please feel encouraged
-;; to edit the examples, and add new code
-;; and evaluate that. Evaluate this to warm up:
+;; このガイドはClojureのコンセプトを読み解き、例を実行するために使ってください。
+;; ところどころにエクササイズがあると思いますが、例もいじったりコードを足したりしてみてください。
+;; まずは下記のコードを評価してみましょう。
 
 (comment
   (str "Welcome"
@@ -125,7 +114,6 @@
   (map str [:foo :bar])    ; works
   (map for [:foo :bar])    ; can't take value of a macro
   (map def [:foo :bar])    ; def is not even a symbol
-
   )
 
 (comment
@@ -293,7 +281,7 @@ like this, if leading spaces are no-no."
   ;; `src/foo/bar_baz.clj` in the project. This file should
   ;; have an `ns` form looking like:
 
-  (ns foo.bar-baz ,,,)
+  (ns foo.bar-baz)
 
   ;; And you require it using something like:
 
@@ -317,7 +305,7 @@ like this, if leading spaces are no-no."
   ;; tricky to figure out. Here's a nice cheat sheet:
   ;; https://gist.github.com/ghoseb/287710/
 
-  
+
   ;; === Namespaced keywords ===
   ;; Keywords can also be namespaced, but they are
   ;; not really registered in a namespace, like
@@ -351,7 +339,7 @@ like this, if leading spaces are no-no."
 
   {:foo [1 2]
    :bar #{1 2}}
-  
+
   ;; In Clojure we do most things with just these
   ;; collections. Literal collections and functions.
   )
@@ -400,7 +388,7 @@ like this, if leading spaces are no-no."
   ;; https://en.wikipedia.org/wiki/S-expression
   ;; Above, `(str 1 2 3 4 5 :foo)` is a form, as is `str`,
   ;; `1` and `:foo`.
-  
+
 
   ;; You define new functions and bind them to names
   ;; in the current namespace using the macro `defn`.
@@ -525,7 +513,7 @@ like this, if leading spaces are no-no."
 
   ;; `macroexpand does nothing here, since `if` is not
   ;; a macro:
-  
+
   (macroexpand '(if test
                   value-if-true
                   value-if-false))
@@ -854,7 +842,7 @@ to the compiler") "This is not ignored"
   ;; notice how available the host platform is when
   ;; coding Clojure. The same goes for
   ;; ClojureScript and for Clojure CLR.
-  
+
   ;; Repeating this important resource on the Reader:
   ;; https://clojure.org/reference/reader
   ;; And in addition to that, read about All Those
@@ -1158,13 +1146,13 @@ to the compiler") "This is not ignored"
   (as-> 15 $
     (range 1 $ 3)
     (interpose ":" $))
-  
+
   ;; Others use other names 😄
 
   (as-> 15 <>
     (range 1 <> 3)
     (interpose ":" <>))
-  
+
   ;; I think emojis should be avoided, the official
   ;; docs only mention alphanumerics plus:
   ;; `*`, `+`, `!`, `-`, `_`, `'`, `?`, `<`, `>`, and `=`
@@ -1961,7 +1949,7 @@ to the compiler") "This is not ignored"
     (if (zero? x)
       y
       (plus (dec x) (inc y))))
-  
+
   ;; But there are too many cases not handled here...
   ;; Hmmm... Let's keep it simple and only do
   ;; integer math. Then we can use Java's
@@ -2247,7 +2235,7 @@ to the compiler") "This is not ignored"
   ;;    So, not mutating anything, including not printing
   ;;    anything anywhere, or hitting mutating API
   ;;    endpoints.
-  
+
   ;; A pure function is deterministic and you can
   ;; safely call it without worrying that it will update
   ;; application state or do anything else than
@@ -2443,7 +2431,7 @@ to the compiler") "This is not ignored"
 
 
 
-  
+
 
   ;; The reward is one less visit to StackOverflow
   ;; for you when lacking `dissoc-in` 😄
@@ -2521,9 +2509,9 @@ to the compiler") "This is not ignored"
   ;; amazing literal syntax for these the code gets
   ;; gets easy to read and reason about. And
   ;; manipulating them is easy and intuitive.
-  
+
   ;; `sets` are `seqs` (more on that later)
-)
+  )
 
 
 ;; To be continued...

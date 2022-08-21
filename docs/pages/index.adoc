@@ -89,6 +89,12 @@ image::images/chapter_1/jack_in.gif[REPLを起動する動画]
 
 === Clojureの値
 
+REPLが起動できたら、 Clojureの基本的な値をREPLに打ち込んでみましょう。
+
+```clojure
+clj:user> "Hello from Clojure!"
+
+```
 
 === Clojureの式
 
